@@ -38,7 +38,7 @@ ARG KUBESEC_VERSION=2.11.4
 
 # split layers into distinct components
 # Install yamllint and kubectl via the alpine packages repositories
-RUN apk add --no-cache --upgrade bash ca-certificates curl tar yamllint git \
+RUN apk add --no-cache --upgrade bash ca-certificates curl tar yamllint git openssh-client \
   && apk add kubectl helm --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 
 # Install Kubeval
